@@ -2,68 +2,248 @@ import React from "react";
 
 function Product() {
   return (
-    <>
-      <header className="header_section">
-        <div className="container-fluid">
-          <nav className="navbar navbar-expand-lg custom_nav-container ">
-            <a className="navbar-brand" href="index.html">
-              <span>Timups</span>
-            </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className=""> </span>
-            </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
-              <ul className="navbar-nav">
-                <li className="nav-item active">
-                  <a className="nav-link" href="index.html">
-                    Home <span className="sr-only">(current)</span>
+    <div>
+      <section className="product_section layout_padding">
+        <div className="container">
+          <div className="heading_container heading_center">
+            <h2>Our Products</h2>
+          </div>
+          <div className="row">
+            <div className="col-sm-6 col-lg-4">
+              <div className="box">
+                <div className="img-box">
+                  <img src="images/p1.png" alt="" />
+                  <a href="" className="add_cart_btn">
+                    <span> Add To Cart </span>
                   </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="watches.html">
-                    {" "}
-                    Watches{" "}
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="about.html">
-                    {" "}
-                    About{" "}
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="contact.html">
-                    Contact Us
-                  </a>
-                </li>
-              </ul>
-              <div className="user_option-box">
-                <a href="">
-                  <i className="fa fa-user" aria-hidden="true" />
-                </a>
-                <a href="">
-                  <i className="fa fa-cart-plus" aria-hidden="true" />
-                </a>
-                <a href="">
-                  <i className="fa fa-search" aria-hidden="true" />
-                </a>
+                </div>
+                <div className="detail-box">
+                  <h5>Product Name</h5>
+                  <div className="product_info">
+                    <h5>
+                      <span>$</span> 300
+                    </h5>
+                    <div className="star_container">
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </nav>
+            <div className="col-sm-6 col-lg-4">
+              <div className="box">
+                <div className="img-box">
+                  <img src="images/p2.png" alt="" />
+                  <a href="" className="add_cart_btn">
+                    <span> Add To Cart </span>
+                  </a>
+                </div>
+                <div className="detail-box">
+                  <h5>Product Name</h5>
+                  <div className="product_info">
+                    <h5>
+                      <span>$</span> 300
+                    </h5>
+                    <div className="star_container">
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-6 col-lg-4">
+              <div className="box">
+                <div className="img-box">
+                  <img src="images/p3.png" alt="" />
+                  <a href="" className="add_cart_btn">
+                    <span> Add To Cart </span>
+                  </a>
+                </div>
+                <div className="detail-box">
+                  <h5>Product Name</h5>
+                  <div className="product_info">
+                    <h5>
+                      <span>$</span> 300
+                    </h5>
+                    <div className="star_container">
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-6 col-lg-4">
+              <div className="box">
+                <div className="img-box">
+                  <img src="images/p4.png" alt="" />
+                  <a href="" className="add_cart_btn">
+                    <span> Add To Cart </span>
+                  </a>
+                </div>
+                <div className="detail-box">
+                  <h5>Product Name</h5>
+                  <div className="product_info">
+                    <h5>
+                      <span>$</span> 300
+                    </h5>
+                    <div className="star_container">
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-6 col-lg-4">
+              <div className="box">
+                <div className="img-box">
+                  <img src="images/p5.png" alt="" />
+                  <a href="" className="add_cart_btn">
+                    <span> Add To Cart </span>
+                  </a>
+                </div>
+                <div className="detail-box">
+                  <h5>Product Name</h5>
+                  <div className="product_info">
+                    <h5>
+                      <span>$</span> 300
+                    </h5>
+                    <div className="star_container">
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-6 col-lg-4">
+              <div className="box">
+                <div className="img-box">
+                  <img src="images/p6.png" alt="" />
+                  <a href="" className="add_cart_btn">
+                    <span> Add To Cart </span>
+                  </a>
+                </div>
+                <div className="detail-box">
+                  <h5>Product Name</h5>
+                  <div className="product_info">
+                    <h5>
+                      <span>$</span> 300
+                    </h5>
+                    <div className="star_container">
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-6 col-lg-4">
+              <div className="box">
+                <div className="img-box">
+                  <img src="images/p7.png" alt="" />
+                  <a href="" className="add_cart_btn">
+                    <span> Add To Cart </span>
+                  </a>
+                </div>
+                <div className="detail-box">
+                  <h5>Product Name</h5>
+                  <div className="product_info">
+                    <h5>
+                      <span>$</span> 300
+                    </h5>
+                    <div className="star_container">
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-6 col-lg-4">
+              <div className="box">
+                <div className="img-box">
+                  <img src="images/p8.png" alt="" />
+                  <a href="" className="add_cart_btn">
+                    <span> Add To Cart </span>
+                  </a>
+                </div>
+                <div className="detail-box">
+                  <h5>Product Name</h5>
+                  <div className="product_info">
+                    <h5>
+                      <span>$</span> 300
+                    </h5>
+                    <div className="star_container">
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-6 col-lg-4">
+              <div className="box">
+                <div className="img-box">
+                  <img src="images/p9.png" alt="" />
+                  <a href="" className="add_cart_btn">
+                    <span> Add To Cart </span>
+                  </a>
+                </div>
+                <div className="detail-box">
+                  <h5>Product Name</h5>
+                  <div className="product_info">
+                    <h5>
+                      <span>$</span> 300
+                    </h5>
+                    <div className="star_container">
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                      <i className="fa fa-star" aria-hidden="true" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="btn_box">
+            <a href="" className="view_more-link">
+              {" "}
+              View More{" "}
+            </a>
+          </div>
         </div>
-      </header>
-    </>
+      </section>
+    </div>
   );
 }
 

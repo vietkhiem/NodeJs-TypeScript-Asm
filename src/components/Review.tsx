@@ -116,7 +116,7 @@ function Review() {
                 </div>
               </div>
             </div>
-            <div className="carousel_btn-box">
+            {/* <div className="carousel_btn-box">
               <a
                 className="carousel-control-prev"
                 href="#carouselExample2Controls"
@@ -139,7 +139,7 @@ function Review() {
                 </span>
                 <span className="sr-only">Next</span>
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

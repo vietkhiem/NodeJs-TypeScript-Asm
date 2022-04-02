@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function productForm() {
-    return (
-        <div>productForm</div>
-    )
+  return <div>productForm</div>;
 }
 
-export default productForm
+export default productForm;

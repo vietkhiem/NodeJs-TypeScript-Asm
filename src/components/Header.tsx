@@ -80,12 +80,12 @@ function Header() {
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="why.html">
-                      Why Us
+                      Contact
                     </a>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="testimonial.html">
-                      Testimonial
+                      Blog
                     </a>
                   </li>
                 </ul>

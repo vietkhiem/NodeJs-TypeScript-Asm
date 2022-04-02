@@ -1,6 +1,6 @@
 import React from "react";
 
-function product() {
+function Product() {
   return (
     <>
       <header className="header_section">
@@ -67,4 +67,4 @@ function product() {
   );
 }
 
-export default product;
+export default Product;

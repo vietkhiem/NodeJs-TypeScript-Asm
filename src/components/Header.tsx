@@ -30,7 +30,7 @@ function Header() {
               <div className="user_option_box">
                 <a href="" className="account-link">
                   <i className="fa fa-user" aria-hidden="true" />
-                  <span>My Account</span>
+                  <span>Sign In</span>
                 </a>
                 <a href="" className="cart-link">
                   <i className="fa fa-shopping-cart" aria-hidden="true" />

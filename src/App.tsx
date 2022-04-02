@@ -11,6 +11,7 @@ import Partners from "./components/Partners";
 import Contact from "./components/Contact";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
+import Productdetail from "./pages/product/productDetail";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,6 +22,8 @@ function App() {
       <Contact />
       <Signin />
       <Signup />
+      <Productdetail />
+
       <Banner />
 
       <Product />

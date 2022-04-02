@@ -44,7 +44,7 @@ function Header() {
           <div className="container-fluid">
             <nav className="navbar navbar-expand-lg custom_nav-container ">
               <a className="navbar-brand" href="index.html">
-                <span>Minics</span>
+                <span>Minics Phone</span>
               </a>
               <button
                 className="navbar-toggler"

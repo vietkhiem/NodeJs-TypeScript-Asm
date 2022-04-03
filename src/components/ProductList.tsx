@@ -18,8 +18,8 @@ const ProductList = ({ products }: ProductListProps) => {
               console.log(product);
               return (
                 <div className="col-sm-6 col-lg-4">
-                  <div className="box">
-                    <div className="img-box">
+                  <div className="box boxproduct">
+                    <div className="img-box ">
                       <NavLink to={`/products/${product._id}`}>
                         {" "}
                         <img src={product.img} />

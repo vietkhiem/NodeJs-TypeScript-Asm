@@ -56,7 +56,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  color: #000000;
 }
+
 
 a,
 a:hover,
@@ -320,6 +322,10 @@ a:focus {
   color: #3a4468;
 }
 
+.detail-box{
+  color: #000000;
+}
+
 .slider_section .detail-box h1 {
   font-weight: bold;
   margin-bottom: 25px;
@@ -437,6 +443,7 @@ a:focus {
 }
 
 .product_section .box .img-box .add_cart_btn {
+  text-decoration: none;
   display: inline-block;
   width: 175px;
   text-align: center;
@@ -453,6 +460,9 @@ a:focus {
   transition: all .3s;
   opacity: 0;
   z-index: 3;
+}
+.boxproduct:hover{
+  background-color: #3a4468;
 }
 
 .product_section .box .img-box .add_cart_btn:hover {

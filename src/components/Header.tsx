@@ -2,6 +2,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 type Props = {};
+const stylelogo = {
+  width: "75px",
+};
 
 const Header = (props: Props) => {
   return (
@@ -49,7 +52,8 @@ const Header = (props: Props) => {
           <div className="container-fluid">
             <nav className="navbar navbar-expand-lg custom_nav-container ">
               <a className="navbar-brand" href="/">
-                <span>Minics Phone</span>
+                <img src="/images/logo.png" style={stylelogo} alt="" />
+                <span>Minics Phone</span>{" "}
               </a>
               <button
                 className="navbar-toggler"

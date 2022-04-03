@@ -17,16 +17,17 @@ const Bottom = (props: Props) => {
                     </a>
                   </h5>
                   <p>
-                    <i className="fa fa-map-marker" aria-hidden="true" />
-                    Address
+                    <i className="fa fa-map-marker mr-2" aria-hidden="true" />
+                    Tòa nhà FPT Polytechnic, P. Trịnh Văn Bô, Xuân Phương, Nam
+                    Từ Liêm, Hà Nội, Việt Nam
                   </p>
                   <p>
-                    <i className="fa fa-phone" aria-hidden="true" />
-                    +01 1234567890
+                    <i className="fa fa-phone mr-2" aria-hidden="true" />
+                    +84 123456789
                   </p>
                   <p>
-                    <i className="fa fa-envelope" aria-hidden="true" />
-                    demo@gmail.com
+                    <i className="fa fa-envelope mr-2" aria-hidden="true" />
+                    Khiemnvph10889@fpt.edu.vn
                   </p>
                 </div>
               </div>

@@ -52,6 +52,7 @@ import BlogDetail from "./pages/BlogDeatail";
 import PrivateRouter from "./components/PrivateRouter";
 import SearchPase from "./pages/SearchPase";
 import Contact from "./components/Contact";
+import Cart from "./components/cart/Cart";
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [products, setProducts] = useState<ProductType[]>([]);
@@ -266,6 +267,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<Cart />} />
 
         <Route
           path="admin"

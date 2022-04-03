@@ -46,7 +46,7 @@ const Signin = () => {
             <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
               <form>
                 <div className="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-                  <p className="lead fw-normal mb-0 me-3 fs-1">Sign in </p>
+                  <p className="lead fw-normal mb-0 me-3 fs-1">Sign In </p>
                 </div>
                 <div className="divider d-flex align-items-center my-4"></div>
                 {/* Email input */}

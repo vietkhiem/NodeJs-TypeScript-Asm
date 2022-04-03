@@ -37,8 +37,8 @@ const Header = (props: Props) => {
                     <span>Sign In</span>
                   </NavLink>
                 </a>
-                <a href="" className="cart-link">
-                  <i className="fa fa-shopping-cart" aria-hidden="true" />
+                <a href="/cart" className="cart-link">
+                  <i className="fa fa-shopping-cart mr-3" aria-hidden="true" />
                   <span>Cart</span>
                 </a>
               </div>

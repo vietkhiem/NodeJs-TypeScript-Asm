@@ -1,35 +1,28 @@
 {
-  "products": [
+  "phones": [
     {
       "id": 1,
       "name": "Product B",
+      "desc": "The iPhone is a smartphone made by Apple that combines a computer, iPod, digital camera and cellular phone into one device with a touchscreen interface. The iPhone runs the iOS operating system, and in 2021 when the iPhone 13 was introduced, it offered up to 1 TB of storage and a 12-megapixel camera.",
       "price": 200,
+      "status": 1,
       "img": "https://lavenderstudio.com.vn/wp-content/uploads/2017/03/chup-anh-san-pham-my-pham.jpg"
     },
     {
       "id": 2,
       "name": "Product B",
+      "desc": "The iPhone is a smartphone made by Apple that combines a computer, iPod, digital camera and cellular phone into one device with a touchscreen interface. The iPhone runs the iOS operating system, and in 2021 when the iPhone 13 was introduced, it offered up to 1 TB of storage and a 12-megapixel camera.",
       "price": 200,
+      "status": 1,
       "img": "https://lavenderstudio.com.vn/wp-content/uploads/2017/03/chup-anh-san-pham-my-pham.jpg"
     },
     {
       "id": 3,
       "name": "Product B",
+      "desc": "The iPhone is a smartphone made by Apple that combines a computer, iPod, digital camera and cellular phone into one device with a touchscreen interface. The iPhone runs the iOS operating system, and in 2021 when the iPhone 13 was introduced, it offered up to 1 TB of storage and a 12-megapixel camera.",
       "price": 200,
+      "status": 1,
       "img": "https://lavenderstudio.com.vn/wp-content/uploads/2017/03/chup-anh-san-pham-my-pham.jpg"
-    },
-    {
-      "id": 4,
-      "name": "Product B",
-      "price": 200,
-      "img": "https://lavenderstudio.com.vn/wp-content/uploads/2017/03/chup-anh-san-pham-my-pham.jpg"
-    },
-    {
-      "name": "lethetam",
-      "price": "231230",
-      "img": {},
-      "detail": "",
-      "id": 5
     }
   ],
   "posts": [

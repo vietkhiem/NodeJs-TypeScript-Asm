@@ -34,7 +34,9 @@ const Header = (props: Props) => {
               <div className="user_option_box">
                 <a href="" className="account-link">
                   <i className="fa fa-user" aria-hidden="true" />
-                  <span>Sign In</span>
+                  <NavLink to={"/signin"}>
+                    <span>Sign In</span>
+                  </NavLink>
                 </a>
                 <a href="" className="cart-link">
                   <i className="fa fa-shopping-cart" aria-hidden="true" />
@@ -47,7 +49,7 @@ const Header = (props: Props) => {
         <div className="header_bottom">
           <div className="container-fluid">
             <nav className="navbar navbar-expand-lg custom_nav-container ">
-              <a className="navbar-brand" href="index.html">
+              <a className="navbar-brand" href="/">
                 <span>Minics Phone</span>
               </a>
               <button

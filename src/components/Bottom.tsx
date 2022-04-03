@@ -1,75 +1,106 @@
-import React from 'react'
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 const Bottom = (props: Props) => {
-    return (
-        <>
-            <div>
-                <div className=" w-[1200px] m-auto grid grid-cols-4 pt-10 pb-10 gap-[20px] ">
-                    <div className="w-[320px] px-[20px] ">
-                        <div>
-                            <img src="https://rafcart.rslahmed.com/assets/images/svg/logo.svg" />
-                        </div>
-                        <p className="py-[10px] leading-5">Lorem ipsum, or it is sometimes kno wn, is dummy text used in laying out print</p>
-                        <div>
-                            <div className="footer_newslet">
-                                <h6 className="font-bold py-[10px]">NEWSLETTER</h6>
-                                <form className="footernews_form">
-                                    <input type="text" placeholder="Your email address" className="py-[10px] rounded-lg bg-none" />
-                                    <a href="#">
-                                        <button type="submit" className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Sing in</button>
-                                    </a>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="intro px-[20px]">
-                        <div>
-
-                            <h4 className="font-bold leading-8 ">MY ACCOUNT</h4>
-                        </div>
-                        <div className="pt-[10px] leading-8">
-                            <p><a href="" className="no-underline text-blue-600 visited:text-purple-600 hover:text-red-500">Orders</a></p>
-                            <p><a href="" className="no-underline text-blue-600 visited:text-purple-600 hover:text-red-500">Wishlist</a></p>
-                            <p><a href="" className="no-underline text-blue-600 visited:text-purple-600 hover:text-red-500">Track Order</a></p>
-                            <p><a href="" className="no-underline text-blue-600 visited:text-purple-600 hover:text-red-500">Manage Account</a></p>
-                            <p><a href="" className="no-underline text-blue-600 visited:text-purple-600 hover:text-red-500">Return Order</a></p>
-                        </div>
-                    </div>
-                    <div className="intro px-[20px]">
-                        <div>
-
-                            <h4 className="font-bold leading-8 ">INFORMATION</h4>
-                        </div>
-                        <div className="pt-[10px] leading-8">
-                            <p><a href="" className="no-underline text-blue-600 visited:text-purple-600 hover:text-red-500">About Us</a></p>
-                            <p><a href="" className="no-underline text-blue-600 visited:text-purple-600 hover:text-red-500">Return Policy</a></p>
-                            <p><a href="" className="no-underline text-blue-600 visited:text-purple-600 hover:text-red-500">Terms &amp; condition</a></p>
-                            <p><a href="" className="no-underline text-blue-600 visited:text-purple-600 hover:text-red-500">Privacy Policy</a></p>
-                            <p><a href="" className="no-underline text-blue-600 visited:text-purple-600 hover:text-red-500">
-                                FAQ</a></p>
-                        </div>
-                    </div>
-                    <div className="intro px-[20px]">
-                        <div>
-                            <h4 className="font-bold leading-8 ">CONTACT</h4>
-                        </div>
-                        <div className="pt-[10px] leading-8">
-                            <p>Tòa nhà FPT Polytechnic, P. Trịnh Văn Bô, Xuân Phương, Nam Từ Liêm, Hà Nội</p>
-                            <p>Phone :+566 477 256, +566 254 575</p>
-                            <p>Email : Thetam1998@gmail.com</p>
-                        </div>
-                    </div>
+  return (
+    <div>
+      <>
+        <section className="info_section">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-3">
+                <div className="info_contact">
+                  <h5>
+                    <a href="" className="navbar-brand">
+                      <span> Minics </span>
+                    </a>
+                  </h5>
+                  <p>
+                    <i className="fa fa-map-marker" aria-hidden="true" />
+                    Address
+                  </p>
+                  <p>
+                    <i className="fa fa-phone" aria-hidden="true" />
+                    +01 1234567890
+                  </p>
+                  <p>
+                    <i className="fa fa-envelope" aria-hidden="true" />
+                    demo@gmail.com
+                  </p>
                 </div>
-                <div className="py-3 bg-[#2b2d42] text-center text-xs text-[#ffffff]">
-                    <p>© RAFCART - All Rights Reserved</p>
+              </div>
+              <div className="col-md-3">
+                <div className="info_info">
+                  <h5>Information</h5>
+                  <p>
+                    Eligendi sunt, provident, debitis nemo, facilis cupiditate
+                    velit libero dolorum aperiam enim nulla iste maxime corrupti
+                    ad illo libero minus.
+                  </p>
                 </div>
+              </div>
+              <div className="col-md-3">
+                <div className="info_links">
+                  <h5>Useful Link</h5>
+                  <ul>
+                    <li>
+                      <a href="index.html"> Home </a>
+                    </li>
+                    <li>
+                      <a href="about.html"> About </a>
+                    </li>
+                    <li>
+                      <a href="product.html"> Products </a>
+                    </li>
+                    <li>
+                      <a href="why.html"> Why Us </a>
+                    </li>
+                    <li>
+                      <a href="testimonial.html"> Testimonial </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="info_form">
+                  <h5>Newsletter</h5>
+                  <form action="">
+                    <input type="email" placeholder="Enter your email" />
+                    <button>Subscribe</button>
+                  </form>
+                  <div className="social_box">
+                    <a href="">
+                      <i className="fa fa-facebook" aria-hidden="true" />
+                    </a>
+                    <a href="">
+                      <i className="fa fa-twitter" aria-hidden="true" />
+                    </a>
+                    <a href="">
+                      <i className="fa fa-instagram" aria-hidden="true" />
+                    </a>
+                    <a href="">
+                      <i className="fa fa-youtube" aria-hidden="true" />
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </section>
+        {/* end info_section */}
+        {/* footer section */}
+        <footer className="footer_section">
+          <div className="container">
+            <p>
+              © <span id="displayYear" /> All Rights Reserved By
+              <a href="https://html.design/">Free Html Templates</a>
+            </p>
+          </div>
+        </footer>
+      </>
+    </div>
+  );
+};
 
-
-        </>
-    )
-}
-
-export default Bottom
+export default Bottom;

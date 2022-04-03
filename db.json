@@ -1,28 +1,28 @@
 {
-  "phones": [
+  "products": [
     {
       "id": 1,
-      "name": "Product B",
+      "name": "Samsung Galaxy S20 Ultra ",
       "desc": "The iPhone is a smartphone made by Apple that combines a computer, iPod, digital camera and cellular phone into one device with a touchscreen interface. The iPhone runs the iOS operating system, and in 2021 when the iPhone 13 was introduced, it offered up to 1 TB of storage and a 12-megapixel camera.",
-      "price": 200,
+      "price": 1000,
       "status": 1,
-      "img": "https://lavenderstudio.com.vn/wp-content/uploads/2017/03/chup-anh-san-pham-my-pham.jpg"
+      "img": "https://image.cellphones.com.vn/220x/media/catalog/product/y/e/yellow_final_2.jpg"
     },
     {
       "id": 2,
-      "name": "Product B",
+      "name": "Iphone 13 ProMax",
       "desc": "The iPhone is a smartphone made by Apple that combines a computer, iPod, digital camera and cellular phone into one device with a touchscreen interface. The iPhone runs the iOS operating system, and in 2021 when the iPhone 13 was introduced, it offered up to 1 TB of storage and a 12-megapixel camera.",
-      "price": 200,
+      "price": 2000,
       "status": 1,
-      "img": "https://lavenderstudio.com.vn/wp-content/uploads/2017/03/chup-anh-san-pham-my-pham.jpg"
+      "img": "https://image.cellphones.com.vn/220x/media/catalog/product/i/p/iphone_13-_pro-5_4_1.jpg"
     },
     {
       "id": 3,
-      "name": "Product B",
+      "name": "Samsung Galaxy S22 Ultra",
       "desc": "The iPhone is a smartphone made by Apple that combines a computer, iPod, digital camera and cellular phone into one device with a touchscreen interface. The iPhone runs the iOS operating system, and in 2021 when the iPhone 13 was introduced, it offered up to 1 TB of storage and a 12-megapixel camera.",
-      "price": 200,
+      "price": 1500,
       "status": 1,
-      "img": "https://lavenderstudio.com.vn/wp-content/uploads/2017/03/chup-anh-san-pham-my-pham.jpg"
+      "img": "https://image.cellphones.com.vn/220x/media/catalog/product/s/m/sm-s908_galaxys22ultra_front_green_211119.jpg"
     }
   ],
   "posts": [

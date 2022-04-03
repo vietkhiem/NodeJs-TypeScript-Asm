@@ -1,106 +1,45 @@
-import React from "react";
+import React from 'react'
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css'
+type Props = {}
+const slideImages = [
+    {
+        url: 'https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1568455300105-1X8EOW3FLT27EN19OO30/chup-anh-san-pham-shynh2019-4.jpg',
 
-function Banner() {
-  return (
-    <div>
-      <section className="slider_section">
-        <div
-          id="customCarousel1"
-          className="carousel slide"
-          data-ride="carousel"
-        >
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <div className="container">
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="detail-box">
-                      <h1>Welcome to our shop</h1>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Iste quam velit saepe dolorem deserunt quo quidem
-                        ad optio.
-                      </p>
-                      <a href=""> Read More </a>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="img-box">
-                      <img src="images/slider-img.png" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+    },
+    {
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmH1-1nvrzTpDiTKqAqexbvP-e4BoWo66MeDI5-TTVChReoy_ItuGmpDxLNIpaKX0_UV4&usqp=CAU',
+
+    },
+    {
+        url: 'https://logoaz.net/wp-content/uploads/2019/02/quy-tac-chup-anh-san-pham-phong-nen.jpg',
+
+    },
+];
+const Banner = (props: Props) => {
+    return (
+        <>
+            {/* <img src="https://suno.vn/blog/wp-content/uploads/2018/05/cach-chup-anh-san-pham-co-concept-758x400.jpg" alt="" width="100%" height="300" /> */}
+            <div className="slide-container">
+                <Slide>
+                    {slideImages.map((slideImage, index) => (
+                        <div className="each-slide" key={index}>
+                            <div style={{ 'backgroundImage': `url(${slideImage.url})` }} >
+                                <span>{slideImage.caption}</span>
+                            </div>
+                        </div>
+                    ))}
+                </Slide>
             </div>
-            <div className="carousel-item">
-              <div className="container">
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="detail-box">
-                      <h1>Welcome to our shop</h1>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Iste quam velit saepe dolorem deserunt quo quidem
-                        ad optio.
-                      </p>
-                      <a href=""> Read More </a>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="img-box">
-                      <img src="images/slider-img.png" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <div className="container">
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="detail-box">
-                      <h1>Welcome to our shop</h1>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Iste quam velit saepe dolorem deserunt quo quidem
-                        ad optio.
-                      </p>
-                      <a href=""> Read More </a>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="img-box">
-                      <img src="images/slider-img.png" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="carousel_btn_box">
-            <a
-              className="carousel-control-prev"
-              href="#customCarousel1"
-              role="button"
-              data-slide="prev"
-            >
-              <i className="fa fa-angle-left" aria-hidden="true" />
-              <span className="sr-only">Previous</span>
-            </a>
-            <a
-              className="carousel-control-next"
-              href="#customCarousel1"
-              role="button"
-              data-slide="next"
-            >
-              <i className="fa fa-angle-right" aria-hidden="true" />
-              <span className="sr-only">Next</span>
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+
+
+
+        </>
+
+
+    )
 }
 
-export default Banner;
+export default Banner
+
+

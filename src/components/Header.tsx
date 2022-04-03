@@ -1,6 +1,10 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import Search from "./Search";
 
-function Header() {
+type Props = {};
+
+const Header = (props: Props) => {
   return (
     <div>
       <header className="header_section">
@@ -96,6 +100,6 @@ function Header() {
       </header>
     </div>
   );
-}
+};
 
 export default Header;

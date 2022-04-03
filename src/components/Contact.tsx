@@ -1,14 +1,17 @@
 import React from "react";
+import Bottom from "./Bottom";
+import Header from "./Header";
 
 function Contact() {
   return (
     <div>
+      <Header />
       <section className="contact_section">
         <div className="container">
           <div className="row">
             <div className="col-md-6">
               <div className="form_container">
-                <div className="heading_container">
+                <div className="heading_container mt-5">
                   <h2>Contact Us</h2>
                 </div>
                 <form action="">
@@ -28,7 +31,7 @@ function Contact() {
                       placeholder="Message"
                     />
                   </div>
-                  <div className="d-flex ">
+                  <div className="d-flex mb-5">
                     <button>SEND</button>
                   </div>
                 </form>
@@ -42,6 +45,7 @@ function Contact() {
           </div>
         </div>
       </section>
+      <Bottom />
     </div>
   );
 }

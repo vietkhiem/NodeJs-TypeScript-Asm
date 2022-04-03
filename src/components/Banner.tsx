@@ -17,18 +17,21 @@ const Banner = (props: Props) => {
                 <div className="row">
                   <div className="col-md-6">
                     <div className="detail-box">
-                      <h1>Welcome to our shop</h1>
+                      <h1>Welcome To Minics Phone</h1>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Iste quam velit saepe dolorem deserunt quo quidem
-                        ad optio.
+                        The world is quickly moving to 5G. Streaming,
+                        downloading — everything happens so much faster. 5G is
+                        even fast enough for serious multiplayer gaming, sharing
+                        AR videos, and more. With Smart Data mode, iPhone will
+                        downshift automatically to save power when you don’t
+                        need all that speed.
                       </p>
                       <a href=""> Read More </a>
                     </div>
                   </div>
                   <div className="col-md-6">
                     <div className="img-box">
-                      <img src="images/slider-img.png" alt="" />
+                      <img src="images/dark.png" alt="" />
                     </div>
                   </div>
                 </div>

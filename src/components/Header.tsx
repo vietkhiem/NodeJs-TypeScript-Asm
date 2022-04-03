@@ -84,7 +84,7 @@ const Header = (props: Props) => {
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="why.html">
+                    <a className="nav-link" href="/contact">
                       Contact
                     </a>
                   </li>

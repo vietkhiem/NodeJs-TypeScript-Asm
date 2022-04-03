@@ -28,7 +28,6 @@ import {
   removebanner,
   updatebanner,
 } from "./api/banner";
-import BannerAdmin from "./pages/admin/banner";
 import { CategoryType } from "./types/category";
 import {
   addCategory,
@@ -52,8 +51,6 @@ import Blog from "./components/Blog";
 import BlogDetail from "./pages/BlogDeatail";
 import PrivateRouter from "./components/PrivateRouter";
 import SearchPase from "./pages/SearchPase";
-import BannerAdd from "./pages/admin/banner/add";
-import BannerEdit from "./pages/admin/banner/edit";
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [products, setProducts] = useState<ProductType[]>([]);
@@ -125,41 +122,6 @@ function App() {
   const onHandleUpdate = async (product: ProductType) => {
     try {
       const { data } = await update(product);
-      if (data) {
-        toast.success("Sua thanh cong");
-      }
-    } catch (error: {}) {
-      toast.error(error.response.data);
-    }
-  };
-  // xoa banner
-  const removebaner = async (id: number | string) => {
-    try {
-      const { data } = await removebanner(id);
-      if (data) {
-        toast.success("xoa thanh cong");
-        setbanner(banners.filter((item) => item._id !== id));
-      }
-    } catch (error: {}) {
-      toast.error(error.response.data);
-    }
-  };
-  // them banner
-  const onHaAdd = async (banner: BannerType) => {
-    try {
-      const { data } = await addbanner(banner);
-      if (data) {
-        toast.success("Them thanh cong");
-        setbanner([...banners, data]);
-      }
-    } catch (error: {}) {
-      toast.error(error.response.data);
-    }
-  };
-  // // cap nhap baner
-  const onHUpdate = async (banner: BannerType) => {
-    try {
-      const { data } = await updatebanner(banner);
       if (data) {
         toast.success("Sua thanh cong");
       }
@@ -299,8 +261,10 @@ function App() {
             <Route index element={<SearchPase />} />
           </Route>
         </Route>
+
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
+
         <Route
           path="admin"
           element={
@@ -323,17 +287,7 @@ function App() {
               element={<ProductEdit onUpdate={onHandleUpdate} />}
             />
           </Route>
-          <Route path="banner">
-            <Route
-              index
-              element={<BannerAdmin banners={banners} onRemove={removebaner} />}
-            />
-            <Route path="add" element={<BannerAdd onAdd={onHaAdd} />} />
-            <Route
-              path=":id/edit"
-              element={<BannerEdit onUpdate={onHUpdate} />}
-            />
-          </Route>
+
           <Route path="category">
             <Route
               index

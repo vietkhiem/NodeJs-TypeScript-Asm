@@ -22,7 +22,7 @@ const Signin = () => {
   const onSumbit: SubmitHandler<FormInputs> = async (user) => {
     const { data } = await signin(user);
     if (data) {
-      toast.success("Bạn đã đăng nhập thành công, chờ 3s");
+      toast.success("Bạn đã đăng nhập thành công, bạn sẽ chuyển về trang chủ");
       setTimeout(() => {
         navigate("/");
         localStorage.setItem("user", JSON.stringify(data));
@@ -44,7 +44,13 @@ const Signin = () => {
               />
             </div>
             <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-              <form>
+              <form
+                method="Post"
+                action=""
+                className="mt-10"
+                id="formSignup"
+                onSubmit={handleSubmit(onSumbit)}
+              >
                 <div className="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
                   <p className="lead fw-normal mb-0 me-3 fs-1">Sign In </p>
                 </div>
@@ -52,24 +58,31 @@ const Signin = () => {
                 {/* Email input */}
                 <div className="form-outline mb-4">
                   <input
-                    type="email"
-                    id="form3Example3"
                     className="form-control form-control-lg"
-                    placeholder="Enter a valid email address"
+                    v-model="form.email"
+                    type="email"
+                    required
+                    placeholder="Email"
+                    id="email-address"
+                    {...register("email")}
                   />
-                  <label className="form-label" htmlFor="form3Example3">
+                  <label className="form-label" htmlFor="username">
                     Email address
                   </label>
                 </div>
                 {/* Password input */}
                 <div className="form-outline mb-3">
                   <input
-                    type="password"
-                    id="form3Example4"
                     className="form-control form-control-lg"
-                    placeholder="Enter password"
+                    v-model="form.password"
+                    type="password"
+                    placeholder="Password"
+                    required
+                    autoComplete="current-password"
+                    id="password"
+                    {...register("password")}
                   />
-                  <label className="form-label" htmlFor="form3Example4">
+                  <label className="form-label" htmlFor="password">
                     Password
                   </label>
                 </div>
@@ -92,7 +105,7 @@ const Signin = () => {
                 </div>
                 <div className="text-center text-lg-start mt-4 pt-2">
                   <button
-                    type="button"
+                    type="submit"
                     className="btn btn-primary btn-lg"
                     style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem" }}
                   >
@@ -106,11 +119,11 @@ const Signin = () => {
                   </p>
                 </div>
               </form>
+              <ToastContainer />
             </div>
           </div>
         </div>
       </section>
-      <ToastContainer />
       <Bottom />
     </div>
   );

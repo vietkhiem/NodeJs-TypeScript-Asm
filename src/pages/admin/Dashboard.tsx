@@ -1,11 +1,10 @@
-import React from 'react'
+import React from "react";
+import NavAdmin from "../../components/AdminPase/NavAdmin";
 
-type Props = {}
+type Props = {};
 
-function Dashboard({ }: Props) {
-    return (
-        <div>Dashboard</div>
-    )
+function Dashboard({}: Props) {
+  return <div>Dash</div>;
 }
 
-export default Dashboard
+export default Dashboard;

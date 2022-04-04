@@ -34,7 +34,13 @@ const Signup = () => {
     <div>
       <Header />
       <div className="signup-form">
-        <form action="/examples/actions/confirmation.php" method="post">
+        <form
+          method="Post"
+          action=""
+          className="mt-10"
+          id="formSignup"
+          onSubmit={handleSubmit(onSubmit)}
+        >
           <h2>Sign Up</h2>
           <p>Please fill in this form to create an account!</p>
           <hr />
@@ -48,8 +54,10 @@ const Signup = () => {
               <input
                 type="text"
                 className="form-control"
-                name="username"
                 placeholder="Username"
+                required
+                id="username"
+                {...register("name")}
               />
             </div>
           </div>
@@ -63,8 +71,11 @@ const Signup = () => {
               <input
                 type="email"
                 className="form-control"
-                name="email"
                 placeholder="Email Address"
+                v-model="form.email"
+                required
+                id="email-address"
+                {...register("email")}
               />
             </div>
           </div>
@@ -76,10 +87,14 @@ const Signup = () => {
                 </span>
               </div>
               <input
-                type="text"
                 className="form-control"
-                name="password"
                 placeholder="Password"
+                v-model="form.password"
+                type="password"
+                required
+                autoComplete="current-password"
+                id="password"
+                {...register("password")}
               />
             </div>
           </div>

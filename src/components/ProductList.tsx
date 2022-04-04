@@ -18,15 +18,17 @@ const ProductList = ({ products }: ProductListProps) => {
               console.log(product);
               return (
                 <div className="col-sm-6 col-lg-4">
-                  <div className="box boxproduct">
+                  <div className="box ">
                     <div className="img-box ">
                       <NavLink to={`/products/${product._id}`}>
                         {" "}
                         <img src={product.img} />
                       </NavLink>
-                      <a href="" className="add_cart_btn">
-                        <span> Add To Cart </span>
-                      </a>
+                      <NavLink to={`/products/${product._id}`}>
+                        <a href="" className="add_cart_btn">
+                          <span> Add To Cart </span>
+                        </a>
+                      </NavLink>
                     </div>
                     <div className="detail-box">
                       <h5>{product.name}</h5>

@@ -53,6 +53,7 @@ import PrivateRouter from "./components/PrivateRouter";
 import SearchPase from "./pages/SearchPase";
 import Contact from "./components/Contact";
 import Cart from "./components/cart/Cart";
+import Productdetail from "./components/productDetail";
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [products, setProducts] = useState<ProductType[]>([]);
@@ -253,7 +254,7 @@ function App() {
           />
           <Route path="products">
             <Route index element={<Products products={products} />} />
-            <Route path="/products/:id" element={<ProductsDetail />} />
+            <Route path="/products/:id" element={<Productdetail />} />
           </Route>
           <Route path="blog">
             <Route index element={<Blog posts={posts} />} />
@@ -269,14 +270,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
 
-        <Route
-          path="admin"
-          element={
-            <PrivateRouter>
-              <AdminLayout />
-            </PrivateRouter>
-          }
-        >
+        <Route path="admin" element={<AdminLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="products">
             <Route

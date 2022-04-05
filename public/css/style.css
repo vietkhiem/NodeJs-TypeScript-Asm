@@ -1,7 +1,6 @@
 body {
   font-family: 'Poppins', sans-serif;
   color: #0c0c0c;
-  background-color: #ffffff;
   overflow-x: hidden;
 }
 
@@ -1234,3 +1233,6 @@ img {
         pointer-events: none;
     }
     
+    .dropp li:hover{
+      color: #0076ad;
+    }

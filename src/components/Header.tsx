@@ -2,9 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 type Props = {};
-const stylelogo = {
-  width: "75px",
-};
 
 const Header = (props: Props) => {
   return (
@@ -52,7 +49,6 @@ const Header = (props: Props) => {
           <div className="container-fluid">
             <nav className="navbar navbar-expand-lg custom_nav-container ">
               <a className="navbar-brand" href="/">
-                <img src="/images/logo.png" style={stylelogo} alt="" />
                 <span>Minics Phone</span>{" "}
               </a>
               <button
@@ -79,24 +75,7 @@ const Header = (props: Props) => {
                   <li className="nav-item">
                     <a className="nav-link" href="about.html">
                       {" "}
-                      <div className="dropdown">
-                        Category
-                        <div
-                          className="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton"
-                        >
-                          <a className="dropdown-item" href="#">
-                            IPHONE
-                          </a>
-                          <a className="dropdown-item" href="#">
-                            OPPO
-                          </a>
-                          <a className="dropdown-item" href="#">
-                            SAM SUNG
-                          </a>
-                        </div>
-                      </div>
-                      <div className="container my-4"></div>
+                      <div className="dropdown">Category</div>
                     </a>
                   </li>
                   <li className="nav-item">

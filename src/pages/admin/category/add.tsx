@@ -35,12 +35,12 @@ const CategoryAdd = (props: ProducAddProps) => {
                 </div>
                 <div className="mt-5 flex lg:mt-0 lg:ml-4">
                   <span className="sm:ml-3">
-                    <NavLink to="/admin/products" className="no-underline">
+                    <NavLink to="/admin/category" className="no-underline">
                       <button
                         type="button"
                         className="btn btn-primary mb-2 ml-3"
                       >
-                        Quay lai
+                        Quay lại
                       </button>
                     </NavLink>
                   </span>
@@ -66,7 +66,7 @@ const CategoryAdd = (props: ProducAddProps) => {
                     type="submit"
                     className="btn btn-primary ml-[20px] my-[30px] mt-2"
                   >
-                    Update
+                    Thêm mới
                   </button>
                 </form>
               </div>

@@ -22,12 +22,6 @@ import Signup from "./pages/singup";
 import Signin from "./pages/singin";
 import { BannerType } from "./types/banner";
 
-import {
-  addbanner,
-  listbanner,
-  removebanner,
-  updatebanner,
-} from "./api/banner";
 import { CategoryType } from "./types/category";
 import {
   addCategory,
@@ -53,7 +47,6 @@ import PrivateRouter from "./components/PrivateRouter";
 import SearchPase from "./pages/SearchPase";
 import Contact from "./components/Contact";
 import Cart from "./components/cart/Cart";
-import Productdetail from "./components/productDetail";
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [products, setProducts] = useState<ProductType[]>([]);
@@ -102,7 +95,7 @@ function App() {
     try {
       const { data } = await remove(id);
       if (data) {
-        toast.success("xoa thanh cong");
+        toast.success("Xóa sản phẩm thành công");
         setProducts(products.filter((item) => item._id !== id));
       }
     } catch (error: {}) {
@@ -114,7 +107,7 @@ function App() {
     try {
       const { data } = await add(product);
       if (data) {
-        toast.success("Them thanh cong");
+        toast.success("Thêm thành công");
         setProducts([...products, data]);
       }
     } catch (error: {}) {
@@ -126,7 +119,7 @@ function App() {
     try {
       const { data } = await update(product);
       if (data) {
-        toast.success("Sua thanh cong");
+        toast.success("Cập nhật thành công");
       }
     } catch (error: {}) {
       toast.error(error.response.data);
@@ -137,7 +130,7 @@ function App() {
     try {
       const { data } = await addCategory(categor);
       if (data) {
-        toast.success("Them thanh cong");
+        toast.success("Thêm danh mục thành công");
         setcategory([...category, data]);
       }
     } catch (error: {}) {
@@ -149,7 +142,7 @@ function App() {
     try {
       const { data } = await updateCategory(categor);
       if (data) {
-        toast.success("Sua thanh cong");
+        toast.success("Sửa danh mục thành công");
         setcategory([...category, data]);
       }
     } catch (error: {}) {
@@ -161,7 +154,7 @@ function App() {
     try {
       const { data } = await removeCategory(id);
       if (data) {
-        toast.success("xoa thanh cong");
+        toast.success("Xóa danh mục thành công");
         setcategory(category.filter((item) => item._id !== id));
       }
     } catch (error: {}) {
@@ -173,7 +166,7 @@ function App() {
     try {
       const { data } = await addPost(post);
       if (data) {
-        toast.success("Them thanh cong");
+        toast.success("Thêm thành công");
         setPost([...posts, data]);
       }
     } catch (error: {}) {
@@ -185,7 +178,7 @@ function App() {
     try {
       const { data } = await updatePost(posts);
       if (data) {
-        toast.success("Sua thanh cong");
+        toast.success("Sửa thành công");
       }
     } catch (error: {}) {
       toast.error(error.response.data);
@@ -196,7 +189,7 @@ function App() {
     try {
       const { data } = await removePost(id);
       if (data) {
-        toast.success("xoa thanh cong");
+        toast.success("Xóa tài khoản thành công");
         setPost(posts.filter((item) => item._id !== id));
       }
     } catch (error: {}) {
@@ -208,7 +201,7 @@ function App() {
     try {
       const { data } = await addusers(user);
       if (data) {
-        toast.success("Them thanh cong");
+        toast.success("Thêm tài khoản thành công");
         setusers([...users, data]);
       }
     } catch (error: {}) {
@@ -220,7 +213,7 @@ function App() {
     try {
       const { data } = await updateusers(user);
       if (data) {
-        toast.success("Sua thanh cong");
+        toast.success("Cập nhật thành công");
       }
     } catch (error: {}) {
       toast.error(error.response.data);
@@ -231,7 +224,7 @@ function App() {
     try {
       const { data } = await removeusers(id);
       if (data) {
-        toast.success("xoa thanh cong");
+        toast.success("Xóa tài khoản thành công");
         setusers(users.filter((item) => item._id !== id));
       }
     } catch (error: {}) {
@@ -254,7 +247,7 @@ function App() {
           />
           <Route path="products">
             <Route index element={<Products products={products} />} />
-            <Route path="/products/:id" element={<Productdetail />} />
+            <Route path="/products/:id" element={<ProductsDetail />} />
           </Route>
           <Route path="blog">
             <Route index element={<Blog posts={posts} />} />

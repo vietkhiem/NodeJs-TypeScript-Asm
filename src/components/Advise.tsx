@@ -8,23 +8,21 @@ type Props = {
 const Advise = ({ categorys }: Props) => {
   return (
     <>
-      <div className=" border-top border-start border[#f3f3f3]">
-        {categorys?.map((category, index) => {
-          console.log(category);
-          return (
-            <>
-              <button className="w-[200px]">
-                {" "}
-                <li className="px-[40px] py-[5px]  hover:bg-[#f3f3f3] list-none border-bottom">
-                  <a href="#" className="no-underline ">
-                    {category.name}{" "}
-                  </a>
+      {categorys?.map((category, index) => {
+        console.log(category);
+        return (
+          <>
+            {" "}
+            <a href="/category" className="dropdown-item">
+              <ul className="list-group list-group-flush">
+                <li className="list-group-item list-group-item-action dropp">
+                  {category.name}{" "}
                 </li>
-              </button>
-            </>
-          );
-        })}
-      </div>
+              </ul>
+            </a>
+          </>
+        );
+      })}
     </>
   );
 };

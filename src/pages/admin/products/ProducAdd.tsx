@@ -10,6 +10,7 @@ type FromInput = {
   name: string;
   price: number;
   img: string;
+  desc: string;
 };
 
 const ProducAdd = (props: ProducAddProps) => {
@@ -96,6 +97,7 @@ const ProducAdd = (props: ProducAddProps) => {
                             <div className="mb-6">
                               <textarea
                                 id="details"
+                                {...register("desc")}
                                 rows={3}
                                 className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md p-[20px]"
                               />

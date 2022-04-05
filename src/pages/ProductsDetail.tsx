@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { read } from "../api/products";
+import Header from "../components/Header";
 import { ProductType } from "../types/Product";
 
 type Props = {};
@@ -19,6 +20,7 @@ const ProductsDetail = (props: Props) => {
   }, []);
   return (
     <div>
+      <Header />
       <div className="container">
         <div className="card">
           <div className="container-fliud">
@@ -26,39 +28,51 @@ const ProductsDetail = (props: Props) => {
               <div className="preview col-md-6">
                 <div className="preview-pic tab-content">
                   <div className="tab-pane active" id="pic-1">
-                    <img src="https://picsum.photos/400/260" />
+                    <a href="">
+                      <img src={product?.img} />
+                    </a>
                   </div>
                 </div>
                 <ul className="preview-thumbnail nav nav-tabs">
                   <li className="active">
                     <a data-target="#pic-1" data-toggle="tab">
-                      <img src="https://picsum.photos/200/126" />
+                      <a href="">
+                        <img src={product?.img} />
+                      </a>
                     </a>
                   </li>
                   <li>
                     <a data-target="#pic-2" data-toggle="tab">
-                      <img src="https://picsum.photos/200/126" />
+                      <a href="">
+                        <img src={product?.img} />
+                      </a>
                     </a>
                   </li>
                   <li>
                     <a data-target="#pic-3" data-toggle="tab">
-                      <img src="https://picsum.photos/200/126" />
+                      <a href="">
+                        <img src={product?.img} />
+                      </a>
                     </a>
                   </li>
                   <li>
                     <a data-target="#pic-3" data-toggle="tab">
-                      <img src="https://picsum.photos/200/126" />
+                      <a href="">
+                        <img src={product?.img} />
+                      </a>
                     </a>
                   </li>
                   <li>
                     <a data-target="#pic-3" data-toggle="tab">
-                      <img src="https://picsum.photos/200/126" />
+                      <a href="">
+                        <img src={product?.img} />
+                      </a>
                     </a>
                   </li>
                 </ul>
               </div>
               <div className="details col-md-6">
-                <h3 className="product-title">men's shoes fashion</h3>
+                <h3 className="product-title">{product?.name}</h3>
                 <div className="rating">
                   <div className="stars">
                     <span className="fa fa-star checked" />
@@ -69,13 +83,9 @@ const ProductsDetail = (props: Props) => {
                   </div>
                   <span className="review-no">41 reviews</span>
                 </div>
-                <p className="product-description">
-                  Suspendisse quos? Tempus cras iure temporibus? Eu laudantium
-                  cubilia sem sem! Repudiandae et! Massa senectus enim minim
-                  sociosqu delectus posuere.
-                </p>
+                <p className="product-description">{product?.desc}</p>
                 <h4 className="price">
-                  current price: <span>$180</span>
+                  current price: <span>${product?.price}</span>
                 </h4>
                 <p className="vote">
                   <strong>91%</strong> of buyers enjoyed this product!{" "}

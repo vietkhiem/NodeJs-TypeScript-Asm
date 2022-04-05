@@ -24,9 +24,9 @@ const ProductList = ({ products }: ProductListProps) => {
                         {" "}
                         <img src={product.img} />
                       </NavLink>
-                      <NavLink to={`/products/${product._id}`}>
+                      <NavLink to={`/productdetails/${product._id}`}>
                         <a href="" className="add_cart_btn">
-                          <span> Add To Cart </span>
+                          <span> Product details </span>
                         </a>
                       </NavLink>
                     </div>

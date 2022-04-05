@@ -21,7 +21,7 @@ const ProductsDetail = (props: Props) => {
   return (
     <div>
       <Header />
-      <div className="container">
+      <div className="container mb-5">
         <div className="card">
           <div className="container-fliud">
             <div className="wrapper row">
@@ -37,35 +37,35 @@ const ProductsDetail = (props: Props) => {
                   <li className="active">
                     <a data-target="#pic-1" data-toggle="tab">
                       <a href="">
-                        <img src={product?.img} />
+                        <img src={product?.thumnail} />
                       </a>
                     </a>
                   </li>
                   <li>
                     <a data-target="#pic-2" data-toggle="tab">
                       <a href="">
-                        <img src={product?.img} />
+                        <img src={product?.thumnail} />
                       </a>
                     </a>
                   </li>
                   <li>
                     <a data-target="#pic-3" data-toggle="tab">
                       <a href="">
-                        <img src={product?.img} />
+                        <img src={product?.thumnail} />
                       </a>
                     </a>
                   </li>
                   <li>
                     <a data-target="#pic-3" data-toggle="tab">
                       <a href="">
-                        <img src={product?.img} />
+                        <img src={product?.thumnail} />
                       </a>
                     </a>
                   </li>
                   <li>
                     <a data-target="#pic-3" data-toggle="tab">
                       <a href="">
-                        <img src={product?.img} />
+                        <img src={product?.thumnail} />
                       </a>
                     </a>
                   </li>

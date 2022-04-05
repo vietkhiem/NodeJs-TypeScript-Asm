@@ -12,6 +12,7 @@ type FormInputs = {
   price: number;
   img: string;
   desc: string;
+  thumnail: string;
 };
 
 const ProductEdit = (props: ProductAddProps) => {
@@ -83,6 +84,17 @@ const ProductEdit = (props: ProductAddProps) => {
                               className="form-control"
                               id="img"
                               {...register("img")}
+                            />
+                          </div>
+                          <div className="col-span-6 sm:col-span-4 pb-[30px]">
+                            <label className="block text-sm font-medium text-black">
+                              Image
+                            </label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="img"
+                              {...register("thumnail")}
                             />
                           </div>
                           <div className="col-span-6 sm:col-span-4 pb-[30px]">

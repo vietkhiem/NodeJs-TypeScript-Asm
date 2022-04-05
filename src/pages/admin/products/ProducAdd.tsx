@@ -11,6 +11,7 @@ type FromInput = {
   price: number;
   img: string;
   desc: string;
+  thumnail: string;
 };
 
 const ProducAdd = (props: ProducAddProps) => {
@@ -87,6 +88,17 @@ const ProducAdd = (props: ProducAddProps) => {
                               className="form-control"
                               id="img"
                               {...register("img")}
+                            />
+                          </div>
+                          <div className="col-span-6 sm:col-span-4 pb-[30px]">
+                            <label className="block text-sm font-medium text-black">
+                              Thumnail
+                            </label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="thumnail"
+                              {...register("thumnail")}
                             />
                           </div>
 

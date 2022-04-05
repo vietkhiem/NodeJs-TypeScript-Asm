@@ -4,7 +4,6 @@ import { Navigate, useNavigate } from "react-router-dom";
 import WebsiteLayout from "./pages/layouts/WebsiteLayout";
 import { ProductType } from "./types/Product";
 import { add, list, remove, update } from "./api/products";
-import ProductsDetail from "./pages/ProductsDetail";
 import HomePage from "./pages/HomePage";
 import Products from "./pages/Products";
 import AdminLayout from "./pages/admin/AdminLayout";
@@ -47,6 +46,7 @@ import PrivateRouter from "./components/PrivateRouter";
 import SearchPase from "./pages/SearchPase";
 import Contact from "./components/Contact";
 import Cart from "./components/cart/Cart";
+import ProductsDetail from "./pages/ProductsDetail";
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [products, setProducts] = useState<ProductType[]>([]);

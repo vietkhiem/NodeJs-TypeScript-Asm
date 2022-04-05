@@ -36,20 +36,38 @@ const NavAdmin = (props: Props) => {
             {/* Left links */}
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link text-black" href="#">
                   Dashboard
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Team
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Projects
-                </a>
-              </li>
+              <NavLink to="/admin/user">
+                <li className="nav-item">
+                  <a className="nav-link text-black" href="#">
+                    User
+                  </a>
+                </li>
+              </NavLink>
+              <NavLink to="/admin/category">
+                <li className="nav-item">
+                  <a className="nav-link text-black" href="#">
+                    Category
+                  </a>
+                </li>
+              </NavLink>
+              <NavLink to="/admin/products">
+                <li className="nav-item">
+                  <a className="nav-link text-black" href="#">
+                    Products
+                  </a>
+                </li>
+              </NavLink>
+              <NavLink to="/admin/post">
+                <li className="nav-item">
+                  <a className="nav-link text-black" href="#">
+                    Post
+                  </a>
+                </li>
+              </NavLink>
             </ul>
             {/* Left links */}
           </div>
@@ -57,45 +75,8 @@ const NavAdmin = (props: Props) => {
           {/* Right elements */}
           <div className="d-flex align-items-center">
             {/* Icon */}
-            <a className="text-reset me-3" href="#">
-              <i className="fas fa-shopping-cart" />
-            </a>
+
             {/* Notifications */}
-            <div className="dropdown">
-              <a
-                className="text-reset me-3 dropdown-toggle hidden-arrow"
-                href="#"
-                id="navbarDropdownMenuLink"
-                role="button"
-                data-mdb-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <i className="fas fa-bell" />
-                <span className="badge rounded-pill badge-notification bg-danger">
-                  1
-                </span>
-              </a>
-              <ul
-                className="dropdown-menu dropdown-menu-end"
-                aria-labelledby="navbarDropdownMenuLink"
-              >
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Some news
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Another news
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Something else here
-                  </a>
-                </li>
-              </ul>
-            </div>
             {/* Avatar */}
             <div className="dropdown">
               <a

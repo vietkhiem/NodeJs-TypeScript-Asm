@@ -71,7 +71,7 @@ const ProductManager = (props: ProductManagerProps) => {
                           {" "}
                           <Link
                             to={`/admin/products/${product._id}/edit`}
-                            className="btn btn-primary"
+                            className="btn btn-primary mr-2"
                           >
                             Update
                           </Link>

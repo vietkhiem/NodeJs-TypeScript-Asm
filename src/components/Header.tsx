@@ -79,7 +79,24 @@ const Header = (props: Props) => {
                   <li className="nav-item">
                     <a className="nav-link" href="about.html">
                       {" "}
-                      About
+                      <div className="dropdown">
+                        Category
+                        <div
+                          className="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton"
+                        >
+                          <a className="dropdown-item" href="#">
+                            IPHONE
+                          </a>
+                          <a className="dropdown-item" href="#">
+                            OPPO
+                          </a>
+                          <a className="dropdown-item" href="#">
+                            SAM SUNG
+                          </a>
+                        </div>
+                      </div>
+                      <div className="container my-4"></div>
                     </a>
                   </li>
                   <li className="nav-item">

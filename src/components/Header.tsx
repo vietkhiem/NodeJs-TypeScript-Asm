@@ -5,7 +5,7 @@ type Props = {};
 
 const Header = (props: Props) => {
   return (
-    <div>
+    <>
       <header className="header_section">
         <div className="header_top">
           <div className="container-fluid">
@@ -72,12 +72,14 @@ const Header = (props: Props) => {
                       Home <span className="sr-only">(current)</span>
                     </a>
                   </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="about.html">
-                      {" "}
-                      <div className="dropdown">Category</div>
-                    </a>
-                  </li>
+                  <NavLink to={"/products"}>
+                    <li className="nav-item">
+                      <a className="nav-link" href="/products">
+                        {" "}
+                        <div className="dropdown">Category</div>
+                      </a>
+                    </li>
+                  </NavLink>
                   <li className="nav-item">
                     <a className="nav-link" href="/products">
                       Products
@@ -89,7 +91,7 @@ const Header = (props: Props) => {
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="testimonial.html">
+                    <a className="nav-link" href="/blog">
                       Blog
                     </a>
                   </li>
@@ -99,7 +101,7 @@ const Header = (props: Props) => {
           </div>
         </div>
       </header>
-    </div>
+    </>
   );
 };
 

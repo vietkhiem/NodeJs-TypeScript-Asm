@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { read } from "../api/products";
 import Header from "../components/Header";
 import { ProductType } from "../types/Product";
@@ -121,12 +121,14 @@ const ProductsDetail = (props: Props) => {
                   <span className="color blue" />
                 </h5> */}
                 <div className="action">
-                  <button
-                    className="add-to-cart btn btn-default "
-                    type="button"
-                  >
-                    add to cart
-                  </button>
+                  <NavLink to={"/cart"}>
+                    <button
+                      className="add-to-cart btn btn-default "
+                      type="button"
+                    >
+                      add to cart
+                    </button>
+                  </NavLink>
                 </div>
               </div>
             </div>

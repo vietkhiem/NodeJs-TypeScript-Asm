@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../components/Header";
 import ProductList from "../components/ProductList";
 import { ProductType } from "../types/Product";
 
@@ -8,9 +9,10 @@ type ProductsProps = {
 
 function Products(props: ProductsProps) {
   return (
-    <div className="">
+    <>
+      <Header />
       <ProductList products={props.products} />
-    </div>
+    </>
   );
 }
 

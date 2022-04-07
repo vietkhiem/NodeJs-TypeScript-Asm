@@ -87,7 +87,7 @@ const HomePage = (props: HomePageProps) => {
                 >
                   <ul className="navbar-nav ">
                     <li className="nav-item active">
-                      <a className="nav-link" href="index.html">
+                      <a className="nav-link" href="/">
                         Home <span className="sr-only">(current)</span>
                       </a>
                     </li>
@@ -137,6 +137,8 @@ const HomePage = (props: HomePageProps) => {
       <ProductList products={props.products} />
 
       <BannerBottom />
+
+      <Blog posts={props.posts} />
 
       <Partners />
 

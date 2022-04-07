@@ -9,10 +9,9 @@ type PostTystProps = {
 const Blog = ({ posts }: PostTystProps) => {
   return (
     <>
-      <Header />
       <div className="container blog-page">
         <div className="row clearfix">
-          <h2 className="text-lg-center mt-5">Blog Minics Phone</h2>
+          <h2 className="text-lg-center mt-5 text-black">Blog Minics Phone</h2>
           {posts?.map((post, index) => {
             console.log(post);
             return (

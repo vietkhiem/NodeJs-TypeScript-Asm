@@ -35,11 +35,13 @@ const NavAdmin = (props: Props) => {
             </a>
             {/* Left links */}
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link text-black" href="#">
-                  Dashboard
-                </a>
-              </li>
+              <NavLink to={"/admin"}>
+                <li className="nav-item">
+                  <a className="nav-link text-black" href="#">
+                    Dashboard
+                  </a>
+                </li>
+              </NavLink>
               <NavLink to="/admin/user">
                 <li className="nav-item">
                   <a className="nav-link text-black" href="#">

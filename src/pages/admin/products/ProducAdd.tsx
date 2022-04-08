@@ -11,6 +11,7 @@ type FromInput = {
   price: number;
   img: string;
   desc: string;
+  status: number;
   thumnail: string;
 };
 
@@ -113,6 +114,21 @@ const ProducAdd = (props: ProducAddProps) => {
                                 rows={3}
                                 className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md p-[20px]"
                               />
+                            </div>
+                            <div>
+                              <label htmlFor="">Status</label>
+                              <input
+                                type="radio"
+                                {...register("status")}
+                                value={0}
+                              />
+                              Không kích hoạt
+                              <input
+                                type="radio"
+                                {...register("status")}
+                                value={1}
+                              />
+                              Kích hoạt
                             </div>
                           </div>
                           <button

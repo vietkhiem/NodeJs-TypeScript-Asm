@@ -49,6 +49,10 @@ const ProductManager = (props: ProductManagerProps) => {
                       {" "}
                       <span className="ml-2">Price</span>{" "}
                     </th>
+                    <th>
+                      {" "}
+                      <span className="ml-2">Status</span>{" "}
+                    </th>
 
                     <th colSpan={2} className="">
                       {" "}
@@ -67,6 +71,9 @@ const ProductManager = (props: ProductManagerProps) => {
                           <img src={product.img} alt="" width="100px" />
                         </td>
                         <td>{product.price}</td>
+                        <td>
+                          {product.status ? "Kích hoạt" : "Không kích hoạt"}
+                        </td>
                         <td colSpan={2}>
                           {" "}
                           <Link

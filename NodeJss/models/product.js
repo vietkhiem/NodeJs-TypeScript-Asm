@@ -21,6 +21,10 @@ const productSchema = new Schema({
         type: String,
         required: true
     },
+    status: {
+        type: Number,
+        required: true
+    },
     thumnail: {
         type: String,
         required: true

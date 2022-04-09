@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 const SearchPase = (props: Props) => {
-    return (
-        <div>SearchPase</div>
-    )
-}
+  return <div>SearchPase</div>;
+};
 
-export default SearchPase
+export default SearchPase;

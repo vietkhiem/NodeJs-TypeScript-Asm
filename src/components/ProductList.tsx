@@ -13,6 +13,16 @@ const ProductList = ({ products }: ProductListProps) => {
           <div className="heading_container heading_center">
             <h2>Our Products</h2>
           </div>
+          <form className="search_form">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Search here..."
+            />
+            <button className="" type="submit">
+              <i className="fa fa-search" aria-hidden="true" />
+            </button>
+          </form>
           <div className="row">
             {products?.map((product, index) => {
               console.log(product);

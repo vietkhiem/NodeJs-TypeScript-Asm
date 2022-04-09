@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { PostType } from "../types/Post";
-import Header from "./Header";
 
 type PostTystProps = {
   posts: PostType[];

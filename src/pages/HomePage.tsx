@@ -28,11 +28,11 @@ const HomePage = (props: HomePageProps) => {
               <div className="top_nav_container">
                 <div className="contact_nav">
                   <a href="">
-                    <i className="fa fa-phone" aria-hidden="true" />
-                    <span>Call : +84 123456789</span>
+                    <i className="fa fa-phone mr-2" aria-hidden="true" />
+                    <span className="">Call : +84 123456789</span>
                   </a>
                   <a href="">
-                    <i className="fa fa-envelope" aria-hidden="true" />
+                    <i className="fa fa-envelope mr-2" aria-hidden="true" />
                     <span>Email : khiemnvph10889@fpt.edu.vn</span>
                   </a>
                 </div>
@@ -47,12 +47,12 @@ const HomePage = (props: HomePageProps) => {
                   </button>
                 </form>
                 <div className="user_option_box">
-                  <a href="" className="account-link">
+                  {/* <a href="" className="account-link">
                     <i className="fa fa-user" aria-hidden="true" />
                     <NavLink to={"/signin"}>
                       <span>Sign In</span>
                     </NavLink>
-                  </a>
+                  </a> */}
                   <a href="/cart" className="cart-link">
                     <i
                       className="fa fa-shopping-cart mr-3"

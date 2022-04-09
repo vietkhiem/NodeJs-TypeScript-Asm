@@ -47,6 +47,7 @@ import SearchPase from "./pages/SearchPase";
 import Contact from "./components/Contact";
 import Cart from "./components/cart/Cart";
 import ProductsDetail from "./pages/ProductsDetail";
+import Header from "./components/Header";
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [products, setProducts] = useState<ProductType[]>([]);
@@ -245,6 +246,7 @@ function App() {
               />
             }
           />
+          <Route index element={<Header />} />
           <Route path="products">
             <Route index element={<Products products={products} />} />
             <Route path="/products/:id" element={<ProductsDetail />} />

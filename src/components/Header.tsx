@@ -1,9 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { isAuthenticate } from "../utils/localStorage";
 import { NavLink } from "react-router-dom";
 
 type Props = {};
 
 const Header = (props: Props) => {
+  const user = isAuthenticate();
+  const [signout, setSignout] = useState(true);
+
+  const check = () => {
+    if (signout == true && user) {
+      return (
+        <div className="">
+          <p>Xin chào: {user?.user.name} !</p>
+          <NavLink
+            to=""
+            onClick={() => {
+              localStorage.removeItem("user"), setSignout(false);
+            }}
+          >
+            Đăng xuất
+          </NavLink>
+        </div>
+      );
+    } else {
+      return (
+        <div className="">
+          <p>Xin chào!</p>
+
+          <NavLink
+            to="/signin"
+            onClick={() => {
+              setSignout(true);
+            }}
+          >
+            Đăng nhập
+          </NavLink>
+        </div>
+      );
+    }
+  };
+  useEffect(() => {
+    console.log(1);
+    // setSignout(true)
+  });
   return (
     <>
       <header className="header_section">
@@ -12,15 +52,15 @@ const Header = (props: Props) => {
             <div className="top_nav_container">
               <div className="contact_nav">
                 <a href="">
-                  <i className="fa fa-phone" aria-hidden="true" />
+                  <i className="fa fa-phone mr-2" aria-hidden="true" />
                   <span>Call : +84 123456789</span>
                 </a>
                 <a href="">
-                  <i className="fa fa-envelope" aria-hidden="true" />
+                  <i className="fa fa-envelope mr-2" aria-hidden="true" />
                   <span>Email : khiemnvph10889@fpt.edu.vn</span>
                 </a>
               </div>
-              <form className="search_form">
+              {/* <form className="search_form">
                 <input
                   type="text"
                   className="form-control"
@@ -29,17 +69,14 @@ const Header = (props: Props) => {
                 <button className="" type="submit">
                   <i className="fa fa-search" aria-hidden="true" />
                 </button>
-              </form>
+              </form> */}
               <div className="user_option_box">
                 <a href="" className="account-link">
-                  <i className="fa fa-user" aria-hidden="true" />
-                  <NavLink to={"/signin"}>
-                    <span>Sign In</span>
-                  </NavLink>
+                  <NavLink to={"/signin"}> {check()}</NavLink>
                 </a>
                 <a href="/cart" className="cart-link">
                   <i className="fa fa-shopping-cart mr-3" aria-hidden="true" />
-                  <span>Cart</span>
+                  <span className="">Cart</span>
                 </a>
               </div>
             </div>

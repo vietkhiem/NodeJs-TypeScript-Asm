@@ -39,5 +39,5 @@ export const update = (product: ProductType) => {
 };
 export const SearchProductByName = (keyword: string) => {
   const url = `/products?name_like=${keyword}`;
-  return instance.get(url);
+  return instance.post(url);
 };

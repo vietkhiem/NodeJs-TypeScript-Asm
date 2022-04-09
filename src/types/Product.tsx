@@ -5,4 +5,5 @@ export type ProductType = {
   desc: string;
   status: number;
   img: string;
+  category: string;
 };

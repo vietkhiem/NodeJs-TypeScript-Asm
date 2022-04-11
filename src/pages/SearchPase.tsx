@@ -9,46 +9,56 @@ type Props = {
 
 const SearchPase = (props: Props) => {
   return (
-    <article className=" mx-auto w-[1200px] ">
-      <div className="conten my-[20px]">
-        <h1 className="font-bold text-[20px] py-[20px]">New Arrivals</h1>
-        <div className="product grid grid-cols-4 gap-5 ">
+    <section className="product_section layout_padding">
+      <div className="container">
+        <div className="heading_container heading_center">
+          <h2>Our Products</h2>
+        </div>
+        <div className="row">
           {props.products.map((product, index) => {
             console.log(product);
             return (
-              <form action="">
-                <div
-                  className=" khoiy border-solid border-2 border-[#f3f3f3] rounded-lg  "
-                  key={index}
-                >
-                  <div className=" w-[100%] ">
+              <div className="col-sm-6 col-lg-4">
+                <div className="box ">
+                  <div className="img-box ">
                     <NavLink to={`/products/${product._id}`}>
                       {" "}
                       <img src={product.img} />
                     </NavLink>
-                  </div>
-                  <div className="py-[10px] px-[10px] leading-8">
-                    <NavLink
-                      to={`/products/${product._id}`}
-                      className="no-underline"
-                    >
-                      <h4 className="no-underline text-blue-600 visited:text-purple-600 hover:text-red-500">
-                        {product.name}
-                      </h4>
+                    <NavLink to={`/products/${product._id}`}>
+                      <a href="" className="add_cart_btn">
+                        <span> Product Details </span>
+                      </a>
                     </NavLink>
-                    <p className="text-[15px] text-[red]">{product.price}</p>
-                    <p>130,000,000 lượt xem</p>
                   </div>
-                  <div className="conten-item ">
-                    <button>Add to cart</button>
+                  <div className="detail-box">
+                    <h5>{product.name}</h5>
+                    <div className="product_info">
+                      <h5>
+                        <span>$</span> {product.price}
+                      </h5>
+                      <div className="star_container">
+                        <i className="fa fa-star" aria-hidden="true" />
+                        <i className="fa fa-star" aria-hidden="true" />
+                        <i className="fa fa-star" aria-hidden="true" />
+                        <i className="fa fa-star" aria-hidden="true" />
+                        <i className="fa fa-star" aria-hidden="true" />
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </form>
+              </div>
             );
           })}
         </div>
+        <div className="btn_box">
+          <a href="" className="view_more-link">
+            {" "}
+            View More{" "}
+          </a>
+        </div>
       </div>
-    </article>
+    </section>
   );
 };
 

@@ -1,10 +1,12 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { NavLink, useNavigate } from "react-router-dom";
+import { CategoryType } from "../../../types/category";
 import { ProductType } from "../../../types/Product";
 
 type ProducAddProps = {
   onAdd: (product: ProductType) => void;
+  categorys: CategoryType[];
 };
 type FromInput = {
   name: string;

@@ -2,12 +2,17 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Blog from "../../components/Blog";
 import Bottom from "../../components/Bottom";
+import Header from "../../components/Header";
 
-type Props = {};
+type Props = {
+  searchProduct: (keyword: string) => void;
+};
 
 const WebsiteLayout = (props: Props) => {
   return (
     <div className="">
+      <Header search={props.searchProduct} />
+
       <Outlet />
 
       <Bottom />

@@ -2,9 +2,11 @@ import React, { useEffect } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { NavLink, useNavigate, useParams } from "react-router-dom";
 import { read } from "../../../api/products";
+import { CategoryType } from "../../../types/category";
 import { ProductType } from "../../../types/Product";
 
 type ProductAddProps = {
+  categorys: CategoryType[];
   onUpdate: (product: ProductType) => void;
 };
 type FormInputs = {

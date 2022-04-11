@@ -1,5 +1,6 @@
 import React from "react";
 import { CategoryType } from "../types/category";
+import { NavLink } from "react-router-dom";
 
 type Props = {
   categorys: CategoryType[];
@@ -8,18 +9,27 @@ type Props = {
 const Advise = ({ categorys }: Props) => {
   return (
     <>
+      <h3 className="side-title">Category</h3>
+
       {categorys?.map((category, index) => {
         console.log(category);
         return (
           <>
             {" "}
-            <a href="/category" className="dropdown-item">
-              <ul className="list-group list-group-flush">
-                <li className="list-group-item list-group-item-action dropp">
-                  {category.name}{" "}
+            <div>
+              <ul className="nav">
+                <li className="nav-item">
+                  <a className="nav-link active" href="#">
+                    <NavLink
+                      to={`/productID/${category._id}`}
+                      className="no-underline "
+                    >
+                      {category.name}{" "}
+                    </NavLink>
+                  </a>
                 </li>
               </ul>
-            </a>
+            </div>
           </>
         );
       })}

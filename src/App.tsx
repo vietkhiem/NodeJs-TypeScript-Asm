@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { Navigate, useNavigate } from "react-router-dom";
 import WebsiteLayout from "./pages/layouts/WebsiteLayout";
 import { ProductType } from "./types/Product";
-import { add, list, remove, update } from "./api/products";
+import { add, list, remove, SearchProductByName, update } from "./api/products";
 import HomePage from "./pages/HomePage";
 import Products from "./pages/Products";
 import AdminLayout from "./pages/admin/AdminLayout";
@@ -47,7 +47,9 @@ import SearchPase from "./pages/SearchPase";
 import Contact from "./components/Contact";
 import Cart from "./components/cart/Cart";
 import ProductsDetail from "./pages/ProductsDetail";
+import ProducID from "./pages/producID";
 import Header from "./components/Header";
+
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [products, setProducts] = useState<ProductType[]>([]);
@@ -55,6 +57,8 @@ function App() {
   const [banners, setbanner] = useState<BannerType[]>([]);
   const [category, setcategory] = useState<CategoryType[]>([]);
   const [users, setusers] = useState<UserType[]>([]);
+  const [searchProduct, setsearchProduct] = useState<ProductType[]>([]);
+
   useEffect(() => {
     const getProducts = async () => {
       const { data } = await list();
@@ -232,10 +236,17 @@ function App() {
       toast.error(error.response.data);
     }
   };
+  const onhandleSearch = async (keyword: string) => {
+    const { data } = await SearchProductByName(keyword);
+    setsearchProduct(data);
+  };
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<WebsiteLayout />}>
+        <Route
+          path="/"
+          element={<WebsiteLayout searchProduct={onhandleSearch} />}
+        >
           <Route
             index
             element={
@@ -246,17 +257,20 @@ function App() {
               />
             }
           />
-          <Route index element={<Header />} />
           <Route path="products">
             <Route index element={<Products products={products} />} />
             <Route path="/products/:id" element={<ProductsDetail />} />
           </Route>
+          <Route path="productID">
+            <Route path="/productID/:id" element={<ProducID />} />
+          </Route>
+
           <Route path="blog">
             <Route index element={<Blog posts={posts} />} />
             <Route path="/blog/:id" element={<BlogDetail />} />
           </Route>
           <Route path="search">
-            <Route index element={<SearchPase />} />
+            <Route index element={<SearchPase products={searchProduct} />} />
           </Route>
         </Route>
 
@@ -265,7 +279,14 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
 
-        <Route path="admin" element={<AdminLayout />}>
+        <Route
+          path="admin"
+          element={
+            <PrivateRouter>
+              <AdminLayout />
+            </PrivateRouter>
+          }
+        >
           <Route index element={<Dashboard />} />
           <Route path="products">
             <Route
@@ -274,10 +295,15 @@ function App() {
                 <ProductManager products={products} onRemove={onHanderRemove} />
               }
             />
-            <Route path="add" element={<ProducAdd onAdd={onHandleAdd} />} />
+            <Route
+              path="add"
+              element={<ProducAdd onAdd={onHandleAdd} categorys={category} />}
+            />
             <Route
               path=":id/edit"
-              element={<ProductEdit onUpdate={onHandleUpdate} />}
+              element={
+                <ProductEdit onUpdate={onHandleUpdate} categorys={category} />
+              }
             />
           </Route>
 

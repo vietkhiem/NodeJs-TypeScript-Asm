@@ -24,7 +24,7 @@ const Advise = ({ categorys }: Props) => {
                       to={`/productID/${category._id}`}
                       className="no-underline "
                     >
-                      {category.name}{" "}
+                      {category.name}
                     </NavLink>
                   </a>
                 </li>

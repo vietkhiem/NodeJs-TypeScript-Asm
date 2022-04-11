@@ -114,20 +114,24 @@ const ProductEdit = (props: ProductAddProps) => {
                             </div>
                           </div>
 
-                          <div>
-                            <label htmlFor="">Status</label>
+                          <div className="mt-3 mb-4 text-black">
+                            <label htmlFor="" className="">
+                              Status
+                            </label>
                             <input
                               type="radio"
                               {...register("status")}
                               value={0}
+                              className="ml-4"
                             />
-                            Không kích hoạt
+                            Kích hoạt
                             <input
                               type="radio"
                               {...register("status")}
                               value={1}
+                              className="ml-4"
                             />
-                            Kích hoạt
+                            Không kích hoạt
                           </div>
 
                           <div>

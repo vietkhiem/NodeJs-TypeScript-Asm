@@ -13,8 +13,9 @@ type FromInput = {
   price: number;
   img: string;
   desc: string;
-  status: number;
   thumnail: string;
+  category: string;
+  status: number;
 };
 
 const ProducAdd = (props: ProducAddProps) => {
@@ -105,8 +106,19 @@ const ProducAdd = (props: ProducAddProps) => {
                             />
                           </div>
 
+                          <select
+                            className="form-select mt-3"
+                            aria-label="Default select example"
+                            {...register("category")}
+                          >
+                            <option selected>Choose Category</option>
+                            {props.categorys?.map((item, index) => (
+                              <option value={item._id}>{item.name}</option>
+                            ))}
+                          </select>
+
                           <div className="col-span-6 sm:col-span-4 pb-[30px]">
-                            <label className="block text-sm font-medium text-black">
+                            <label className="block text-sm font-medium text-black mt-2">
                               Details
                             </label>
                             <div className="mb-6">
@@ -117,20 +129,25 @@ const ProducAdd = (props: ProducAddProps) => {
                                 className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md p-[20px]"
                               />
                             </div>
-                            <div>
-                              <label htmlFor="">Status</label>
+
+                            <div className="mt-3 mb-4 text-black">
+                              <label htmlFor="" className="">
+                                Status
+                              </label>
                               <input
                                 type="radio"
                                 {...register("status")}
                                 value={0}
+                                className="ml-4"
                               />
-                              Không kích hoạt
+                              Kích hoạt
                               <input
                                 type="radio"
                                 {...register("status")}
                                 value={1}
+                                className="ml-4"
                               />
-                              Kích hoạt
+                              Không kích hoạt
                             </div>
                           </div>
                           <button

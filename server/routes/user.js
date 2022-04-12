@@ -9,5 +9,6 @@ router.get('/users/:id', checkAuth, read)
 router.post('/users/:userId', requireSignin, isAuth, isAdmin, post)
 router.put('/users/:userId/:id', checkAuth, update)
 router.delete('/users/:userId/:id', checkAuth, remove)
+
 router.param('userId', userById)
 export default router;

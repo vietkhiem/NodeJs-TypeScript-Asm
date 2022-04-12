@@ -10,4 +10,5 @@ router.post('/categorys/:userId', requireSignin, isAuth, isAdmin, post)
 router.put('/categorys/:userId/:id', checkAuth, update)
 router.delete('/categorys/:userId/:id', checkAuth, remove)
 router.param('userId', userById)
+router.get('/productID/:id', read)
 export default router;

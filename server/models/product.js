@@ -20,9 +20,6 @@ const productSchema = new Schema({
         type: String,
 
     },
-    status: {
-        type: Number,
-    },
     category: {
         type: ObjectId,
         ref: "Category"

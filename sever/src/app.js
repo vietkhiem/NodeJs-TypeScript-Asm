@@ -5,32 +5,31 @@ import morgan from 'morgan';
 import productRoute from '../routes/product';
 import postRoute from '../routes/post';
 import categoryRoute from '../routes/category'
-import bannerRoute from '../routes/banner'
 import userRoute from '../routes/auth'
 import UsersRoute from '../routes/user'
+import cartRoute from '../routes/cart'
 const app = express();
 
 // middleware
 app.use(cors());
 app.use(morgan('tiny'));
 app.use(express.json());
+
 //route products
 app.use("/api", productRoute);
-
 //route post
 app.use("/api", postRoute);
 //route category
 app.use('/api', categoryRoute)
-    //user
+//user
 app.use('/api', userRoute)
-    // connect db
-app.use('/api', bannerRoute)
-    // route
-
+// route
 app.use('/api', UsersRoute)
-
+// cart
+app.use('/api', cartRoute)
+// connect db
 mongoose.connect('mongodb://localhost:27017/we16310')
-    // mongoose.connect('mongodb://127.0.0.1:27017/web1639')
+
 
 .then(() => console.log("Kết nối DB thành công"))
     .catch((error) => console.log(error))

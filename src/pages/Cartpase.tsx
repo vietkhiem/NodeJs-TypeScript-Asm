@@ -13,7 +13,7 @@ const CartPage = (props: Props) => {
   cart = JSON.parse(localStorage.getItem("cart") as string);
   let total = 0;
   return (
-    <section className="h-100 h-custom">
+    <section className="">
       <div className="container h-100 py-5">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col">
@@ -21,8 +21,9 @@ const CartPage = (props: Props) => {
               <table className="table">
                 <thead>
                   <tr>
-                    <th scope="col" className="h5">
-                      Shopping Bag
+                    <th scope="col">ID</th>
+                    <th scope="col" className="h5 ">
+                      Products
                     </th>
                     <th scope="col">Price</th>
                     <th scope="col">Quantity</th>
@@ -33,7 +34,8 @@ const CartPage = (props: Props) => {
                   {cart &&
                     cart.map((item: any, index: number) => {
                       return (
-                        <tr>
+                        <tr key={index}>
+                          <td className="">{index + 1}</td>
                           <th scope="row">
                             <div className="d-flex align-items-center">
                               <img
@@ -92,25 +94,22 @@ const CartPage = (props: Props) => {
                     })}
                 </tbody>
               </table>
-              <div className="card mb-5">
-                <>
-                  <div
-                    className="d-flex justify-content-between mb-4"
-                    style={{ fontWeight: 500 }}
-                  >
-                    <p className="mb-2">Total (tax included)</p>
-                    <p className="mb-2">$26.48</p>
+              <div className="col-lg-4 bg-grey float-right ">
+                <div className="p-5">
+                  <h3 className="fw-bold mb-5 mt-2 pt-1">Summary</h3>
+                  <hr className="my-4" />
+                  <div className="d-flex justify-content-between mb-5">
+                    <h5 className="text-uppercase">Total price:</h5>
+                    <h5>${total}</h5>
                   </div>
                   <button
                     type="button"
-                    className="btn btn-primary btn-block btn-lg"
+                    className="btn btn-dark btn-block btn-lg"
+                    data-mdb-ripple-color="dark"
                   >
-                    <div className="d-flex justify-content-between">
-                      <span>Checkout</span>
-                      <span>$26.48</span>
-                    </div>
+                    CheckOut
                   </button>
-                </>
+                </div>
               </div>
             </div>
           </div>

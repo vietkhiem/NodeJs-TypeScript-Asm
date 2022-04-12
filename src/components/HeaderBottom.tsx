@@ -1,36 +1,16 @@
 import React from "react";
-import Advise from "../components/Advise";
-import BannerBottom from "../components/BannerBottom";
-import Blog from "../components/Blog";
-import Partners from "../components/Partners";
-import ProductList from "../components/ProductList";
-import Review from "../components/Review";
-import { CategoryType } from "../types/category";
-import { PostType } from "../types/Post";
 import { NavLink } from "react-router-dom";
 
-import { ProductType } from "../types/Product";
-import Banner from "../components/Banner";
-
-type HomePageProps = {
-  products: ProductType[];
-  posts: PostType[];
-  categorys: CategoryType[];
-  onAddToCart: (cart: any) => void;
-};
-
-const HomePage = (props: HomePageProps) => {
+function HeaderBottom() {
   return (
-    <>
+    <div>
       <div className="header_section">
         <div className="header_bottom">
           <div className="container-fluid">
             <nav className="navbar navbar-expand-lg custom_nav-container ">
-              <NavLink to={"/"}>
-                <a className="navbar-brand" href="/">
-                  <span>Minics Phone</span>{" "}
-                </a>
-              </NavLink>
+              <a className="navbar-brand" href="/">
+                <span>Minics Phone</span>{" "}
+              </a>
               <button
                 className="navbar-toggler"
                 type="button"
@@ -61,9 +41,7 @@ const HomePage = (props: HomePageProps) => {
                           <div
                             className="dropdown-menu"
                             aria-labelledby="dropdownMenuButton"
-                          >
-                            <Advise categorys={props.categorys} />
-                          </div>
+                          ></div>
                         </div>
                       </a>
                     </li>
@@ -91,20 +69,8 @@ const HomePage = (props: HomePageProps) => {
           </div>
         </div>
       </div>
-
-      <Banner />
-
-      <ProductList products={props.products} onAddToCart={props.onAddToCart} />
-
-      <BannerBottom />
-
-      <Blog posts={props.posts} />
-
-      <Partners />
-
-      <Review />
-    </>
+    </div>
   );
-};
+}
 
-export default HomePage;
+export default HeaderBottom;

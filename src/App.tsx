@@ -298,17 +298,6 @@ function App() {
               />
             }
           />
-
-          <Route
-            index
-            element={
-              <HomePage
-                products={products}
-                posts={posts}
-                categorys={category}
-              />
-            }
-          />
           <Route path="products">
             <Route index element={<Products products={products} />} />
             <Route path="/products/:id" element={<ProductsDetail />} />

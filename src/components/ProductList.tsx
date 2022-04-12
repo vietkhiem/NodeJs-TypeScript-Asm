@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { ProductType } from "../types/Product";
+import HeaderBottom from "./HeaderBottom";
 
 type ProductListProps = {
   products: ProductType[];

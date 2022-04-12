@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import HeaderBottom from "../components/HeaderBottom";
 import { currencyPrice } from "../utils/formatMoney";
 
 type Props = {
@@ -14,6 +15,8 @@ const CartPage = (props: Props) => {
   let total = 0;
   return (
     <section className="">
+      <HeaderBottom />
+
       <div className="container h-100 py-5">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col">

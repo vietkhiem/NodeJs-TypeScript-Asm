@@ -1,6 +1,7 @@
 import React from "react";
 import Bottom from "../Bottom";
 import Header from "../Header";
+import HeaderBottom from "../HeaderBottom";
 
 function Cart() {
   return (

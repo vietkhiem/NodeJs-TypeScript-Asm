@@ -20,7 +20,6 @@ const ProductsDetail = (props: Props) => {
   }, []);
   return (
     <div>
-      <Header />
       <div className="container mb-5">
         <div className="card">
           <div className="container-fliud">

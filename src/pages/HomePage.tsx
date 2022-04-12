@@ -1,6 +1,5 @@
 import React from "react";
 import Advise from "../components/Advise";
-import Banner from "../components/Banner";
 import BannerBottom from "../components/BannerBottom";
 import Blog from "../components/Blog";
 import Partners from "../components/Partners";
@@ -16,6 +15,7 @@ type HomePageProps = {
   products: ProductType[];
   posts: PostType[];
   categorys: CategoryType[];
+  onAddToCart: (cart: any) => void;
 };
 
 const HomePage = (props: HomePageProps) => {
@@ -122,7 +122,7 @@ const HomePage = (props: HomePageProps) => {
         </div>
       </section>
 
-      <ProductList products={props.products} />
+      <ProductList products={props.products} onAddToCart={props.onAddToCart} />
 
       <BannerBottom />
 

@@ -3,7 +3,14 @@ import { Route, Routes } from "react-router-dom";
 import { Navigate, useNavigate } from "react-router-dom";
 import WebsiteLayout from "./pages/layouts/WebsiteLayout";
 import { ProductType } from "./types/Product";
-import { add, list, remove, SearchProductByName, update } from "./api/products";
+import {
+  add,
+  list,
+  read,
+  remove,
+  SearchProductByName,
+  update,
+} from "./api/products";
 import HomePage from "./pages/HomePage";
 import Products from "./pages/Products";
 import AdminLayout from "./pages/admin/AdminLayout";
@@ -38,6 +45,13 @@ import PostEdit from "./pages/admin/post/edit";
 import UserAdmin from "./pages/admin/user";
 import { UserType } from "./types/user";
 import { addusers, listusers, removeusers, updateusers } from "./api/user";
+import {
+  addToCart,
+  decreaseItemInCart,
+  increaseItemInCart,
+  removeItemInCart,
+} from "./utils/cart";
+
 import UserAdd from "./pages/admin/user/add";
 import UserEdit from "./pages/admin/user/edit";
 import Blog from "./components/Blog";
@@ -45,10 +59,10 @@ import BlogDetail from "./pages/BlogDeatail";
 import PrivateRouter from "./components/PrivateRouter";
 import SearchPase from "./pages/SearchPase";
 import Contact from "./components/Contact";
-import Cart from "./components/cart/Cart";
 import ProductsDetail from "./pages/ProductsDetail";
 import ProducID from "./pages/producID";
 import Header from "./components/Header";
+import CartPage from "./pages/Cartpase";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -58,6 +72,7 @@ function App() {
   const [category, setcategory] = useState<CategoryType[]>([]);
   const [users, setusers] = useState<UserType[]>([]);
   const [searchProduct, setsearchProduct] = useState<ProductType[]>([]);
+  const [cart, setCart] = useState<ProductType[]>([]);
 
   useEffect(() => {
     const getProducts = async () => {
@@ -240,6 +255,31 @@ function App() {
     const { data } = await SearchProductByName(keyword);
     setsearchProduct(data);
   };
+
+  // Cart
+  const onHandleAddToCart = async (id: number) => {
+    const { data } = await read(id);
+    addToCart({ ...data, quantity: 1 }, function () {
+      toast.success(`Thêm ${data.name} vào giỏ hàng thành công!`);
+      setCart(JSON.parse(localStorage.getItem("cart") as string));
+    });
+  };
+  const onHandleIncreaseItemInCart = (id: number) => {
+    increaseItemInCart(id, () => {
+      setCart(JSON.parse(localStorage.getItem("cart") as string));
+    });
+  };
+  const onHandleDecreaseItemInCart = (id: number) => {
+    decreaseItemInCart(id, () => {
+      setCart(JSON.parse(localStorage.getItem("cart") as string));
+    });
+  };
+
+  const onHandleRemoveCart = (id: number) => {
+    removeItemInCart(id, () => {
+      setCart(JSON.parse(localStorage.getItem("cart") as string));
+    });
+  };
   return (
     <div className="App">
       <Routes>
@@ -247,6 +287,18 @@ function App() {
           path="/"
           element={<WebsiteLayout searchProduct={onhandleSearch} />}
         >
+          <Route
+            index
+            element={
+              <HomePage
+                products={products}
+                posts={posts}
+                categorys={category}
+                onAddToCart={onHandleAddToCart}
+              />
+            }
+          />
+
           <Route
             index
             element={
@@ -269,6 +321,17 @@ function App() {
             <Route index element={<Blog posts={posts} />} />
             <Route path="/blog/:id" element={<BlogDetail />} />
           </Route>
+          <Route
+            path="cart"
+            element={
+              <CartPage
+                onRemoveCart={onHandleRemoveCart}
+                onDecreaseItemInCart={onHandleDecreaseItemInCart}
+                onIncreaseItemInCart={onHandleIncreaseItemInCart}
+              />
+            }
+          />
+
           <Route path="search">
             <Route index element={<SearchPase products={searchProduct} />} />
           </Route>
@@ -277,7 +340,6 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/cart" element={<Cart />} />
 
         <Route
           path="admin"
@@ -351,6 +413,6 @@ function App() {
 }
 
 export default App;
-function then(arg0: () => any) {
+function setCart(arg0: any) {
   throw new Error("Function not implemented.");
 }

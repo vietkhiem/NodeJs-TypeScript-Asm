@@ -5,7 +5,6 @@ import Header from "../Header";
 function Cart() {
   return (
     <div>
-      <Header />
       <section className="h-100 h-custom">
         <div className="container py-5 h-100">
           <div className="row d-flex justify-content-center align-items-center h-100">

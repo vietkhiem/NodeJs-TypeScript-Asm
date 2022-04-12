@@ -4,8 +4,9 @@ import { ProductType } from "../types/Product";
 
 type ProductListProps = {
   products: ProductType[];
+  onAddToCart: (cart: any) => void;
 };
-const ProductList = ({ products }: ProductListProps) => {
+const ProductList = (props: ProductListProps) => {
   return (
     <div>
       <section className="product_section layout_padding">
@@ -14,7 +15,7 @@ const ProductList = ({ products }: ProductListProps) => {
             <h2>Our Products</h2>
           </div>
           <div className="row">
-            {products?.map((product, index) => {
+            {props.products?.map((product, index) => {
               console.log(product);
               return (
                 <div className="col-sm-6 col-lg-4">
@@ -24,14 +25,19 @@ const ProductList = ({ products }: ProductListProps) => {
                         {" "}
                         <img src={product.img} />
                       </NavLink>
-                      <NavLink to={`/products/${product._id}`}>
+                      <NavLink to={`/cart`}>
                         <a href="" className="add_cart_btn">
-                          <span> Product Details </span>
+                          <span onClick={() => props.onAddToCart(product._id)}>
+                            Add To Cart
+                          </span>
                         </a>
                       </NavLink>
                     </div>
                     <div className="detail-box">
-                      <h5>{product.name}</h5>
+                      <NavLink to={`/products/${product._id}`}>
+                        <h5>{product.name}</h5>
+                      </NavLink>
+
                       <div className="product_info">
                         <h5>
                           <span>$</span> {product.price}
